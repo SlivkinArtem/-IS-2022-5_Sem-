@@ -1,0 +1,260 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header__title {
+    font-size: 24px;
+    margin-top: 50px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    z-index: 1000;
+}
+
+.nav__list {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav__item {
+    display: inline;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* 4 лаба */
+}
+
+.nav__link:hover { /* 4 лаба */
+    color: #FFD700; 
+    transform: scale(1.1); 
+    text-decoration: underline;
+}
+
+.nav__link.active { /* 4 лаба */
+    font-weight: bold;
+    color: #FFD700; 
+    border-bottom: 2px solid #FFD700; 
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px; /* Расстояние между секциями */
+    margin-top: 150px;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 2em;
+    margin: 30px 0;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* для списка проектов */
+.projects__list {
+    padding-left: 20px;
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.projects__item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* тень для проектов */
+}
+
+.introduction__photo img {
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+blockquote {
+    font-style: italic;
+    color: #cccccc;
+    border-left: 4px solid #ffffff;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+code {
+    background-color: #1a1a1a;
+    padding: 2px 5px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 4px;
+    color: #e6e6e6;
+}
+
+.contact__info code {
+    font-size: 1.2em;
+    color: #00ff00; 
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a1a1a;
+}
+
+.footer__text {
+    color: #ffffff;
+}
+
+.box-shadow-example {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Маленький экран */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    .footer-banner {
+        display: none;
+    }
+
+    table {
+        display: none; 
+    }
+}
+
+/* Средний экран */
+@media screen and (min-width: 1025px) and (max-width: 1920px) {
+    body {
+        font-size: 1em;
+    }
+
+    .header__title {
+        font-size: 2.5em;
+    }
+}
+
+/* Большой экран */
+@media screen and (min-width: 1921px) {
+    body {
+        font-size: 1.2em;
+    }
+
+    .header__title {
+        font-size: 3em;
+    }
+
+    .main section {
+        padding: 50px;
+    }
+}
+
+.projects__table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+.table__header, .table__cell {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    text-align: center; 
+}
+
+.table__header {
+    background-color: #1a1a1a; 
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #333333;
+}
+
+
+/* to-do list */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Отступы между элементами формы */
+}
+
+input, textarea {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    width: 10%;
+}
+
+pre {
+    /* background-color: #333; */
+    color: #fff;
+    font-size: 1.5em;
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+    padding: 10px;
+    border-radius: 4px;
+    margin: 0; 
+}
+
+/* для 6 лабы */
+#preloader {
+    font-size: 18px;
+    color: #FFD700;
+    text-align: center;
+    margin: 20px 0;
+    display: none; /* Прелоадер скрыт по умолчанию */
+}
+
+#network-tasks {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+#network-task-list {
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+

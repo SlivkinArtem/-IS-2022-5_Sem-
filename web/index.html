@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">  
+<head>
+    <meta charset="UTF-8">  
+    <meta name="keywords" content="портфолио, резюме"> 
+    <meta name="description" content="Портфолио Артёма - Разработчик машинного обучения. Этот сайт содержит мои проекты и контактную информацию.">
+    <title>Артём - Разработчик машинного обучения</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/todo.js" defer></script>
+    <script src="scripts/fetch.js" defer></script>
+
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Сливкин Артём - Разработчик машинного обучения</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#introduction">Обо мне</a></li>
+                <li class="nav__item"><a class="nav__link" href="#projects">Проекты</a></li>
+                <li class="nav__item"><a class="nav__link" href="#resume">Резюме</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contact">Контакты</a></li>
+                <li class="nav__item"><a class="nav__link" href="todo.html">To-Do List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section id="introduction" class="introduction">
+            <h2 class="section__title">Обо мне</h2>
+            <aside class="introduction__photo">
+                <img src="Я.jpg" alt="Моё фото" style="width:350px;height:250px;">
+            </aside>
+            <article class="introduction__info">
+                <p>Я ученик третьего курса Университета ИТМО по специальности «Разработка
+                    программного обеспечения». В ходе обучения на программе я прошел курс по
+                    машинному обучению. Я владею несколькими языками программирования, в том числе
+                    Python и имею опыт работы в разработке, области аналитики данных и машинного
+                    обучения. Хочу заниматься Machine Learning или Deep Learning.
+                </p>
+                <p>Также прошел курсы:
+                    <ul>
+                        <li>Основы программирования на Python(от Центр цифрового образования «IT-куб», двухлетний курс)</li>
+                        <li>"Machine learning with python" с сайта Coursera</li>
+                        <li>"Машинное обучение"(от ВШЭ)</li>
+                        <li>bonus track "Методы анализа данных"(от ИТМО)</li>
+                        <li>"Анализ естественного языка методами машинного обучения" (от ИТМО)</li>  
+                    </ul>
+                </p>
+                <p>Моя любимая цитата:</p>
+                <blockquote class="quote">"Звездный час в жизни мужчины, наступает после достижения им заветной цели. Когда он, сделавший ради этого всё, лежит на поле сражения без сил, но как <em>победитель</em>." - <i>Винс Ломбарди</i></blockquote>
+            </article>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section__title">Мои проекты</h2>
+            <ol class="projects__list">
+                <li class="projects__item">
+                    <img src="project1.png" alt="">
+                    Проект на летней стажировке в лаборатории машинного обучения ИТМО "Умный подсказчик" — Чат-бот, отвечающий на вопросы по законодательной базе, юридической практике и т.д. Нужно было выкачать базу законов и решений судов и на этих текстах обучить чат-бота на основе LLM. Я занимался парсингом и обработкой данных.
+                </li>
+                <li class="projects__item">
+                    <img src="project2.png" alt="">
+                    Соревнование на kaggle "Evaluate-students-summary" — Целью данного соревнования была оценка качества конспектов, написанных обучающимися 3-12 классов. Я построил модель, которая измеряет, насколько хорошо учащиеся представляют основную идею и исходный текст, а также четкость, точность и язык, используемый в сводке. <br>
+                    Стек: Tensorflow, NLTK, Scipy, Scikit-learn, Statsmodels <br>
+                    ● Создал модель Random forest <br>
+                    ● Написал простую нейронную сеть <br>
+                    ● MCRMSE = 0.74. Относительно остальных участников это довольно высокий результат.
+                </li>
+            </ol>
+        </section>
+
+        <section id="table-section" class="table-section">
+            <h2 class="section__title">Мои проекты в таблице</h2>
+            <table class="projects__table">
+                <thead>
+                    <tr>
+                        <th class="table__header">Название</th>
+                        <th class="table__header">Описание</th>
+                        <th class="table__header">Дата</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table__cell">Проект 1</td>
+                        <td class="table__cell">Описание проекта 1</td>
+                        <td class="table__cell">10.10.2024</td>
+                    </tr>
+                    <tr>
+                        <td class="table__cell">Проект 2</td>
+                        <td class="table__cell">Описание проекта 2</td>
+                        <td class="table__cell">11.10.2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="resume" class="resume">
+            <h2 class="section__title">Резюме</h2>
+            <h3 class="resume__subtitle">Образование</h3>
+            <p class="resume__text">НИУ ИТМО<br>
+                Информационные Технологии и Программирование, Информационные Системы и Технологии<br>
+                БАКАЛАВРИАТ, 3 курс<br>
+            </p>
+
+            <h3 class="resume__subtitle">Опыт работы</h3>
+            <p class="resume__text">
+                Летняя стажировка в лаборатории машинного обучения ИТМО Июль 2024 - Август 2024<br>
+                Инженер по машинному обучению.<br>
+                Парсинг, обработка данных.
+            </p>
+
+            <h3 class="resume__subtitle">Навыки</h3>
+            <p class="resume__text">
+                <ul class="resume__skills">
+                    <li>Python, Git</li>
+                    <li>Библиотеки для анализа данных: Pandas, NumPy, Matplotlib, Seaborn, Statsmodels</li>
+                    <li>Библиотеки для ML и DL: keras, Scikit-learn, PyTorch, Tensorflow, CatBoost, OpenCV, NLTK, Transformers</li>
+                    <li>Базы данных: PostgreSQL, MSSQL, MongoDB, SQLite</li>  
+                </ul>
+                Также знаком с:
+                <br>
+                <ul class="resume__skills">
+                    <li>Машинное обучение: NLP, CV, Classic ML</li>
+                    <li>Языки программирования: C++, Java, C#</li>
+                    <li>Frontend: HTML, CSS, JavaScript</li>
+                    <li>DevOps: Linux, Docker, GitHub/Git Kraken, CI/CD</li>
+                </ul>
+            </p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section__title">Где я есть?</h2>
+            <p class="contact__info">Telegram: @artiukek</p>
+            <p class="contact__info">VK: @slivixxxx</p>
+            <p class="contact__info">Email: chertogisevera@gmail.com</p>
+            <p class="contact__info"> <code class="contact__code">Мой github: https://github.com/SlivkinArtem</code>.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 Артём - Разработчик машинного обучения</p>
+    </footer>
+</body>
+</html>
